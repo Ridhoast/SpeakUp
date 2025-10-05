@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin - SpeakUp.id</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-brand">
+        <div class="logo">
+          <a href="index.html" class="logo-text">SpeakUp.id</a>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="student.html" class="nav-link">Siswa</a>
+        <a href="teacher.html" class="nav-link">Guru BK</a>
+        <a href="admin.html" class="nav-link active">Admin</a>
+      </nav>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Header -->
+  <section class="dashboard-header">
+    <div class="container">
+      <div class="admin-welcome">
+        <h1>Dashboard Analitik Sekolah</h1>
+        <p>Pantau kesejahteraan siswa dan kinerja layanan BK secara real-time</p>
+        <div class="date-filter">
+          <select id="periodFilter">
+            <option value="today">Hari Ini</option>
+            <option value="week" selected>Minggu Ini</option>
+            <option value="month">Bulan Ini</option>
+            <option value="semester">Semester Ini</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics -->
+  <section class="key-metrics">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon">👥</div>
+          <div class="metric-content">
+            <h3>156</h3>
+            <p>Total Siswa Aktif</p>
+            <span class="metric-change positive">+12% dari minggu lalu</span>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">💬</div>
+          <div class="metric-content">
+            <h3>89</h3>
+            <p>Sesi Konsultasi</p>
+            <span class="metric-change positive">+8% dari minggu lalu</span>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">⚠️</div>
+          <div class="metric-content">
+            <h3>23</h3>
+            <p>Laporan Masalah</p>
+            <span class="metric-change negative">-5% dari minggu lalu</span>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">😊</div>
+          <div class="metric-content">
+            <h3>4.7</h3>
+            <p>Kepuasan Rata-rata</p>
+            <span class="metric-change positive">+0.2 dari minggu lalu</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Charts Section -->
+  <section class="charts">
+    <div class="container">
+      <div class="charts-grid">
+        <!-- Consultation Categories Chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3>Kategori Konsultasi</h3>
+            <p>Distribusi masalah yang dilaporkan</p>
+          </div>
+          <div class="chart-container">
+            <div class="pie-chart" id="categoryChart">
+              <div class="pie-segment" style="--percentage: 35; --color: #3B82F6;" data-label="Akademik (35%)"></div>
+              <div class="pie-segment" style="--percentage: 25; --color: #10B981;" data-label="Sosial (25%)"></div>
+              <div class="pie-segment" style="--percentage: 20; --color: #F97316;" data-label="Bullying (20%)"></div>
+              <div class="pie-segment" style="--percentage: 15; --color: #FBBF24;" data-label="Keluarga (15%)"></div>
+              <div class="pie-segment" style="--percentage: 5; --color: #8B5CF6;" data-label="Lainnya (5%)"></div>
+            </div>
+            <div class="chart-legend">
+              <div class="legend-item">
+                <div class="legend-color" style="background: #3B82F6;"></div>
+                <span>Akademik (35%)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #10B981;"></div>
+                <span>Sosial (25%)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #F97316;"></div>
+                <span>Bullying (20%)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #FBBF24;"></div>
+                <span>Keluarga (15%)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #8B5CF6;"></div>
+                <span>Lainnya (5%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weekly Trend Chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3>Tren Mingguan</h3>
+            <p>Jumlah sesi konsultasi per hari</p>
+          </div>
+          <div class="chart-container">
+            <div class="bar-chart">
+              <div class="bar-item">
+                <div class="bar" style="height: 60%;" data-value="12"></div>
+                <span class="bar-label">Sen</span>
+              </div>
+              <div class="bar-item">
+                <div class="bar" style="height: 80%;" data-value="16"></div>
+                <span class="bar-label">Sel</span>
+              </div>
+              <div class="bar-item">
+                <div class="bar" style="height: 45%;" data-value="9"></div>
+                <span class="bar-label">Rab</span>
+              </div>
+              <div class="bar-item">
+                <div class="bar" style="height: 90%;" data-value="18"></div>
+                <span class="bar-label">Kam</span>
+              </div>
+              <div class="bar-item">
+                <div class="bar" style="height: 70%;" data-value="14"></div>
+                <span class="bar-label">Jum</span>
+              </div>
+              <div class="bar-item">
+                <div class="bar" style="height: 30%;" data-value="6"></div>
+                <span class="bar-label">Sab</span>
+              </div>
+              <div class="bar-item">
+                <div class="bar" style="height: 25%;" data-value="5"></div>
+                <span class="bar-label">Min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teacher Performance -->
+  <section class="teacher-performance">
+    <div class="container">
+      <h2 class="section-title">Kinerja Guru BK</h2>
+      <div class="performance-table">
+        <div class="table-header">
+          <div class="table-row">
+            <div class="table-cell">Nama Guru</div>
+            <div class="table-cell">Sesi Minggu Ini</div>
+            <div class="table-cell">Rating</div>
+            <div class="table-cell">Total Poin</div>
+            <div class="table-cell">Status</div>
+          </div>
+        </div>
+        <div class="table-body">
+          <div class="table-row">
+            <div class="table-cell">
+              <div class="teacher-info-mini">
+                <div class="avatar-small">👩‍🏫</div>
+                <div>
+                  <strong>Bu Sarah Wijaya</strong>
+                  <p>Konseling Remaja</p>
+                </div>
+              </div>
+            </div>
+            <div class="table-cell">
+              <div class="progress-mini">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+                <span>18/20</span>
+              </div>
+            </div>
+            <div class="table-cell">
+              <span class="rating">⭐ 4.9</span>
+            </div>
+            <div class="table-cell">
+              <span class="points">1,250</span>
+            </div>
+            <div class="table-cell">
+              <span class="status-badge excellent">Excellent</span>
+            </div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell">
+              <div class="teacher-info-mini">
+                <div class="avatar-small">👨‍🏫</div>
+                <div>
+                  <strong>Pak Ahmad Rizki</strong>
+                  <p>Masalah Akademik</p>
+                </div>
+              </div>
+            </div>
+            <div class="table-cell">
+              <div class="progress-mini">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%"></div>
+                </div>
+                <span>15/20</span>
+              </div>
+            </div>
+            <div class="table-cell">
+              <span class="rating">⭐ 4.8</span>
+            </div>
+            <div class="table-cell">
+              <span class="points">980</span>
+            </div>
+            <div class="table-cell">
+              <span class="status-badge good">Good</span>
+            </div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell">
+              <div class="teacher-info-mini">
+                <div class="avatar-small">👩‍🏫</div>
+                <div>
+                  <strong>Bu Indira Sari</strong>
+                  <p>Bullying & Trauma</p>
+                </div>
+              </div>
+            </div>
+            <div class="table-cell">
+              <div class="progress-mini">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+                <span>17/20</span>
+              </div>
+            </div>
+            <div class="table-cell">
+              <span class="rating">⭐ 4.9</span>
+            </div>
+            <div class="table-cell">
+              <span class="points">1,150</span>
+            </div>
+            <div class="table-cell">
+              <span class="status-badge excellent">Excellent</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Activities -->
+  <section class="recent-activities">
+    <div class="container">
+      <div class="activities-grid">
+        <div class="activity-card">
+          <h3>Aktivitas Terbaru</h3>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">💬</div>
+              <div class="activity-content">
+                <p><strong>Bu Sarah</strong> menyelesaikan sesi dengan siswa anonim</p>
+                <span class="activity-time">5 menit lalu</span>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">⚠️</div>
+              <div class="activity-content">
+                <p>Laporan bullying baru dari kelas 10A</p>
+                <span class="activity-time">15 menit lalu</span>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">🎖️</div>
+              <div class="activity-content">
+                <p><strong>Pak Ahmad</strong> mencapai 50 sesi konsultasi</p>
+                <span class="activity-time">1 jam lalu</span>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">📊</div>
+              <div class="activity-content">
+                <p>Laporan mingguan telah diperbarui</p>
+                <span class="activity-time">2 jam lalu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <h3>Export Laporan</h3>
+          <div class="export-options">
+            <button class="btn btn-outline btn-full">
+              📊 Export Data Konsultasi
+            </button>
+            <button class="btn btn-outline btn-full">
+              📈 Export Analitik Bulanan
+            </button>
+            <button class="btn btn-outline btn-full">
+              👥 Export Data Guru BK
+            </button>
+            <button class="btn btn-primary btn-full">
+              📋 Generate Laporan Lengkap
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-text">SpeakUp.id</span>
+          </div>
+          <p class="footer-description">
+            Platform konsultasi digital untuk siswa Indonesia
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SpeakUp.id. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

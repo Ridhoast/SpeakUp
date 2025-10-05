@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Guru BK - SpeakUp.id</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-brand">
+        <div class="logo">
+          <a href="index.html" class="logo-text">SpeakUp.id</a>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="student.html" class="nav-link">Siswa</a>
+        <a href="teacher.html" class="nav-link active">Guru BK</a>
+        <a href="admin.html" class="nav-link">Admin</a>
+      </nav>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Header -->
+  <section class="dashboard-header">
+    <div class="container">
+      <div class="teacher-welcome">
+        <div class="teacher-profile">
+          <div class="teacher-avatar-large">👩‍🏫</div>
+          <div class="teacher-details">
+            <h1>Selamat Datang, Bu Sarah!</h1>
+            <p>Guru BK - Spesialis Konseling Remaja</p>
+            <div class="teacher-stats-inline">
+              <span class="stat-badge">⭐ 4.9 Rating</span>
+              <span class="stat-badge">🎖️ Level 5</span>
+            </div>
+          </div>
+        </div>
+        <div class="performance-summary">
+          <div class="progress-card">
+            <h3>Progress Bulanan</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 75%"></div>
+            </div>
+            <p>75 dari 100 sesi target</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Overview -->
+  <section class="stats-overview">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-content">
+            <h3>8</h3>
+            <p>Sesi Hari Ini</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📊</div>
+          <div class="stat-content">
+            <h3>45</h3>
+            <p>Sesi Minggu Ini</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-content">
+            <h3>1,250</h3>
+            <p>Total Poin</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-content">
+            <h3>4.9</h3>
+            <p>Rating Rata-rata</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pending Requests -->
+  <section class="requests">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Permintaan Konsultasi</h2>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="pending">Menunggu (5)</button>
+          <button class="filter-tab" data-filter="accepted">Diterima (12)</button>
+          <button class="filter-tab" data-filter="completed">Selesai (28)</button>
+        </div>
+      </div>
+
+      <div class="requests-list" id="pendingRequests">
+        <div class="request-card urgent">
+          <div class="request-header">
+            <div class="request-info">
+              <span class="request-id">#REQ-001</span>
+              <span class="request-category">Bullying</span>
+              <span class="urgent-badge">URGENT</span>
+            </div>
+            <div class="request-time">2 jam lalu</div>
+          </div>
+          <div class="request-content">
+            <p><strong>Siswa Anonim</strong> meminta konsultasi tentang:</p>
+            <p>"Saya mengalami bullying dari teman sekelas. Mereka sering mengejek dan mengucilkan saya. Saya merasa
+              takut untuk datang ke sekolah..."</p>
+          </div>
+          <div class="request-actions">
+            <button class="btn btn-primary btn-small" onclick="acceptRequest('REQ-001')">
+              ✓ Terima
+            </button>
+            <button class="btn btn-outline btn-small" onclick="declineRequest('REQ-001')">
+              ✗ Tolak
+            </button>
+            <button class="btn btn-secondary btn-small">
+              💬 Chat
+            </button>
+          </div>
+        </div>
+
+        <div class="request-card">
+          <div class="request-header">
+            <div class="request-info">
+              <span class="request-id">#REQ-002</span>
+              <span class="request-category">Akademik</span>
+            </div>
+            <div class="request-time">4 jam lalu</div>
+          </div>
+          <div class="request-content">
+            <p><strong>Andi Pratama</strong> meminta konsultasi tentang:</p>
+            <p>"Nilai saya turun drastis semester ini. Saya merasa kehilangan motivasi belajar dan tidak tahu harus
+              berbuat apa..."</p>
+          </div>
+          <div class="request-actions">
+            <button class="btn btn-primary btn-small" onclick="acceptRequest('REQ-002')">
+              ✓ Terima
+            </button>
+            <button class="btn btn-outline btn-small" onclick="declineRequest('REQ-002')">
+              ✗ Tolak
+            </button>
+            <button class="btn btn-secondary btn-small">
+              💬 Chat
+            </button>
+          </div>
+        </div>
+
+        <div class="request-card">
+          <div class="request-header">
+            <div class="request-info">
+              <span class="request-id">#REQ-003</span>
+              <span class="request-category">Keluarga</span>
+            </div>
+            <div class="request-time">1 hari lalu</div>
+          </div>
+          <div class="request-content">
+            <p><strong>Siswa Anonim</strong> meminta konsultasi tentang:</p>
+            <p>"Orang tua saya sering bertengkar di rumah. Saya merasa terganggu dan sulit konsentrasi belajar..."</p>
+          </div>
+          <div class="request-actions">
+            <button class="btn btn-primary btn-small" onclick="acceptRequest('REQ-003')">
+              ✓ Terima
+            </button>
+            <button class="btn btn-outline btn-small" onclick="declineRequest('REQ-003')">
+              ✗ Tolak
+            </button>
+            <button class="btn btn-secondary btn-small">
+              💬 Chat
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Today -->
+  <section class="today-schedule">
+    <div class="container">
+      <h2 class="section-title">Jadwal Hari Ini</h2>
+      <div class="schedule-timeline">
+        <div class="schedule-item completed">
+          <div class="schedule-time">08:00 - 09:00</div>
+          <div class="schedule-content">
+            <h4>Konsultasi dengan Andi Pratama</h4>
+            <p>Masalah akademik - Motivasi belajar</p>
+            <span class="status-badge completed">Selesai</span>
+          </div>
+        </div>
+        <div class="schedule-item active">
+          <div class="schedule-time">10:00 - 11:00</div>
+          <div class="schedule-content">
+            <h4>Konsultasi dengan Siswa Anonim</h4>
+            <p>Bullying - Kasus urgent</p>
+            <span class="status-badge active">Sedang Berlangsung</span>
+          </div>
+        </div>
+        <div class="schedule-item upcoming">
+          <div class="schedule-time">13:00 - 14:00</div>
+          <div class="schedule-content">
+            <h4>Konsultasi dengan Sari Dewi</h4>
+            <p>Masalah sosial - Adaptasi</p>
+            <span class="status-badge upcoming">Akan Datang</span>
+          </div>
+        </div>
+        <div class="schedule-item upcoming">
+          <div class="schedule-time">15:00 - 16:00</div>
+          <div class="schedule-content">
+            <h4>Sesi Grup Therapy</h4>
+            <p>Manajemen stress - 5 siswa</p>
+            <span class="status-badge upcoming">Akan Datang</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section class="teacher-achievements">
+    <div class="container">
+      <h2 class="section-title">Pencapaian & Badge</h2>
+      <div class="achievement-grid">
+        <div class="achievement-card earned">
+          <div class="achievement-icon">🎖️</div>
+          <h3>50 Sesi Selesai</h3>
+          <p>Menyelesaikan 50 sesi konsultasi</p>
+          <div class="achievement-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span>50/50</span>
+          </div>
+        </div>
+        <div class="achievement-card earned">
+          <div class="achievement-icon">⭐</div>
+          <h3>Rating Tinggi</h3>
+          <p>Mempertahankan rating 4.8+</p>
+          <div class="achievement-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span>4.9/5.0</span>
+          </div>
+        </div>
+        <div class="achievement-card in-progress">
+          <div class="achievement-icon">🏆</div>
+          <h3>100 Sesi Master</h3>
+          <p>Menyelesaikan 100 sesi konsultasi</p>
+          <div class="achievement-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 75%"></div>
+            </div>
+            <span>75/100</span>
+          </div>
+        </div>
+        <div class="achievement-card locked">
+          <div class="achievement-icon">🌟</div>
+          <h3>Mentor Terbaik</h3>
+          <p>Rating 5.0 selama 3 bulan</p>
+          <div class="achievement-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 60%"></div>
+            </div>
+            <span>2/3 bulan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-text">SpeakUp.id</span>
+          </div>
+          <p class="footer-description">
+            Platform konsultasi digital untuk siswa Indonesia
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SpeakUp.id. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

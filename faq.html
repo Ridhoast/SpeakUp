@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - SpeakUp.id</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-brand">
+        <div class="logo">
+          <a href="index.html" class="logo-text">SpeakUp.id</a>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="faq.html" class="nav-link active">FAQ</a>
+        <a href="student.html" class="nav-link">Siswa</a>
+        <a href="teacher.html" class="nav-link">Guru BK</a>
+        <a href="admin.html" class="nav-link">Admin</a>
+      </nav>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- FAQ Header -->
+  <section class="faq-header">
+    <div class="container">
+      <div class="faq-intro">
+        <h1>Frequently Asked Questions</h1>
+        <p>Temukan jawaban untuk pertanyaan yang sering diajukan tentang SpeakUp.id</p>
+        <div class="search-box">
+          <input type="text" placeholder="Cari pertanyaan..." id="faqSearch">
+          <button type="button">🔍</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Categories -->
+  <section class="faq-categories">
+    <div class="container">
+      <div class="category-tabs">
+        <button class="category-tab active" data-category="general">Umum</button>
+        <button class="category-tab" data-category="student">Untuk Siswa</button>
+        <button class="category-tab" data-category="teacher">Untuk Guru</button>
+        <button class="category-tab" data-category="privacy">Privasi & Keamanan</button>
+        <button class="category-tab" data-category="technical">Teknis</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Content -->
+  <section class="faq-content">
+    <div class="container">
+      <!-- General FAQs -->
+      <div class="faq-category" data-category="general">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Apa itu SpeakUp.id?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>SpeakUp.id adalah platform konsultasi digital yang menghubungkan siswa dengan guru BK (Bimbingan
+              Konseling) secara aman dan nyaman. Platform ini dirancang khusus untuk membantu siswa SMP dan SMA dalam
+              mengatasi berbagai masalah akademik, sosial, dan personal.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Siapa saja yang bisa menggunakan SpeakUp.id?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>SpeakUp.id dapat digunakan oleh:</p>
+            <ul>
+              <li><strong>Siswa SMP dan SMA</strong> - untuk konsultasi dan curhat</li>
+              <li><strong>Guru BK</strong> - untuk memberikan layanan konseling</li>
+              <li><strong>Admin Sekolah</strong> - untuk memantau dan mengelola layanan</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Apakah layanan ini gratis?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Ya, SpeakUp.id adalah platform gratis untuk semua siswa. Sekolah yang ingin menggunakan platform ini
+              dapat menghubungi tim kami untuk informasi lebih lanjut tentang implementasi.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student FAQs -->
+      <div class="faq-category" data-category="student" style="display: none;">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Bagaimana cara memulai konsultasi?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Untuk memulai konsultasi:</p>
+            <ol>
+              <li>Klik tombol "Mulai Bicara" di halaman utama</li>
+              <li>Pilih jenis layanan yang kamu butuhkan</li>
+              <li>Pilih guru BK yang tersedia</li>
+              <li>Pilih jadwal yang cocok</li>
+              <li>Isi form permintaan konsultasi</li>
+              <li>Tunggu konfirmasi dari guru BK</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Apa saja jenis layanan yang tersedia?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>SpeakUp.id menyediakan tiga jenis layanan utama:</p>
+            <ul>
+              <li><strong>Laporan Masalah</strong> - untuk melaporkan masalah atau kejadian di sekolah</li>
+              <li><strong>Konsultasi Pribadi</strong> - untuk konsultasi personal dengan guru BK</li>
+              <li><strong>Curhat Bebas</strong> - untuk berbagi cerita tanpa judgement</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Bagaimana cara kerja Mood Tracker?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Mood Tracker adalah fitur untuk memantau perasaan harian kamu. Cukup klik emoji yang sesuai dengan
+              perasaan kamu hari ini. Data ini membantu guru BK memahami kondisi emosional kamu secara keseluruhan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teacher FAQs -->
+      <div class="faq-category" data-category="teacher" style="display: none;">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Bagaimana cara menjadi guru BK di SpeakUp.id?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Untuk menjadi guru BK di platform ini, kamu harus:</p>
+            <ul>
+              <li>Memiliki kualifikasi sebagai guru BK bersertifikat</li>
+              <li>Terdaftar di sekolah yang menggunakan SpeakUp.id</li>
+              <li>Mengikuti pelatihan platform yang disediakan</li>
+              <li>Mendapat persetujuan dari admin sekolah</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Bagaimana sistem poin dan achievement bekerja?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Sistem gamifikasi dirancang untuk memotivasi guru BK:</p>
+            <ul>
+              <li><strong>Poin</strong> diperoleh dari setiap sesi konsultasi yang diselesaikan</li>
+              <li><strong>Badge</strong> diberikan berdasarkan pencapaian tertentu</li>
+              <li><strong>Level</strong> naik berdasarkan total poin dan rating</li>
+              <li><strong>Achievement</strong> membuka fitur dan privilege baru</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Bagaimana menangani kasus urgent?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Kasus urgent ditandai dengan badge khusus dan notifikasi prioritas. Guru BK diharapkan merespons dalam
+              waktu maksimal 2 jam. Untuk kasus yang sangat serius, sistem akan otomatis mengirim notifikasi ke admin
+              sekolah.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Privacy FAQs -->
+      <div class="faq-category" data-category="privacy" style="display: none;">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Apakah layanan ini benar-benar anonim?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Ya, siswa dapat memilih untuk berkonsultasi secara anonim. Dalam mode anonim:</p>
+            <ul>
+              <li>Identitas siswa tidak ditampilkan ke guru BK</li>
+              <li>Data pribadi dienkripsi dan disimpan aman</li>
+              <li>Hanya admin sistem yang dapat mengakses identitas untuk keperluan darurat</li>
+              <li>Siswa dapat mengungkap identitas kapan saja jika diperlukan</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Bagaimana data saya dilindungi?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Keamanan data adalah prioritas utama kami:</p>
+            <ul>
+              <li>Enkripsi end-to-end untuk semua komunikasi</li>
+              <li>Server aman dengan sertifikat SSL</li>
+              <li>Akses data terbatas hanya untuk pihak yang berwenang</li>
+              <li>Backup data reguler dengan enkripsi</li>
+              <li>Audit keamanan berkala</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Siapa saja yang bisa melihat percakapan saya?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Akses percakapan sangat terbatas:</p>
+            <ul>
+              <li><strong>Guru BK yang dituju</strong> - dapat melihat percakapan lengkap</li>
+              <li><strong>Admin sekolah</strong> - hanya statistik dan data anonim</li>
+              <li><strong>Sistem darurat</strong> - akses otomatis jika terdeteksi kata kunci berbahaya</li>
+              <li><strong>Siswa(user)</strong> - dapat menghapus percakapan kapan saja</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical FAQs -->
+      <div class="faq-category" data-category="technical" style="display: none;">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Perangkat apa saja yang didukung?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>SpeakUp.id dapat diakses melalui:</p>
+            <ul>
+              <li><strong>Web Browser</strong> - Chrome, Firefox, Safari, Edge (versi terbaru)</li>
+              <li><strong>Mobile</strong> - Android dan iOS melalui browser</li>
+              <li><strong>Tablet</strong> - iPad dan Android tablet</li>
+              <li><strong>Desktop</strong> - Windows, Mac, Linux</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Bagaimana jika saya mengalami masalah teknis?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Jika mengalami masalah teknis:</p>
+            <ol>
+              <li>Coba refresh halaman atau restart browser</li>
+              <li>Periksa koneksi internet</li>
+              <li>Clear cache dan cookies browser</li>
+              <li>Coba gunakan browser yang berbeda</li>
+              <li>Hubungi admin sekolah atau tim support</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Apakah ada aplikasi mobile?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Saat ini SpeakUp.id tersedia sebagai web application yang responsive dan dapat diakses melalui browser
+              mobile. Aplikasi mobile native sedang dalam tahap pengembangan dan akan segera tersedia di App Store dan
+              Play Store.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="faq-contact">
+    <div class="container">
+      <div class="contact-card">
+        <h2>Masih ada pertanyaan?</h2>
+        <p>Tim support kami siap membantu kamu 24/7</p>
+        <div class="contact-options">
+          <a href="/cdn-cgi/l/email-protection#added8ddddc2dfd9eddeddc8ccc6d8dd83c4c9" class="btn btn-primary">
+            📧 Email Support
+          </a>
+          <a href="#" class="btn btn-outline">
+            💬 Live Chat
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-text">SpeakUp.id</span>
+          </div>
+          <p class="footer-description">
+            Platform konsultasi digital untuk siswa Indonesia
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SpeakUp.id. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

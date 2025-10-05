@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Siswa - SpeakUp.id</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-brand">
+        <div class="logo">
+          <a href="index.html" class="logo-text">SpeakUp.id</a>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="student.html" class="nav-link active">Siswa</a>
+        <a href="teacher.html" class="nav-link">Guru BK</a>
+        <a href="admin.html" class="nav-link">Admin</a>
+      </nav>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Header -->
+  <section class="dashboard-header">
+    <div class="container">
+      <div class="welcome-card">
+        <div class="welcome-content">
+          <h1>Selamat Datang, Siswa! 👋</h1>
+          <p>Bagaimana perasaanmu hari ini? Kami siap mendengarkan dan membantu.</p>
+        </div>
+        <div class="mood-tracker">
+          <h3>Mood Tracker</h3>
+          <div class="mood-options">
+            <button class="mood-btn" data-mood="sad">😢</button>
+            <button class="mood-btn" data-mood="neutral">😐</button>
+            <button class="mood-btn" data-mood="okay">🙂</button>
+            <button class="mood-btn" data-mood="happy">😃</button>
+            <button class="mood-btn" data-mood="excited">🤩</button>
+          </div>
+          <p class="mood-status" id="moodStatus">Pilih mood kamu hari ini</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Pilih Layanan</h2>
+      <div class="services-grid">
+        <div class="service-card" data-service="laporan">
+          <div class="service-icon">📝</div>
+          <h3>Laporan Masalah</h3>
+          <p>Laporkan masalah atau kejadian yang mengganggu di sekolah</p>
+          <button class="btn btn-outline">Pilih Layanan</button>
+        </div>
+        <div class="service-card" data-service="konsultasi">
+          <div class="service-icon">💬</div>
+          <h3>Konsultasi Pribadi</h3>
+          <p>Konsultasi personal dengan guru BK untuk masalah pribadi</p>
+          <button class="btn btn-outline">Pilih Layanan</button>
+        </div>
+        <div class="service-card" data-service="curhat">
+          <div class="service-icon">💭</div>
+          <h3>Curhat Bebas</h3>
+          <p>Ceritakan apa saja yang ada di pikiran tanpa judgement</p>
+          <button class="btn btn-outline">Pilih Layanan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teachers Section -->
+  <section class="teachers">
+    <div class="container">
+      <h2 class="section-title">Pilih Guru BK</h2>
+      <div class="teachers-grid">
+        <div class="teacher-card">
+          <div class="teacher-avatar">
+            <div class="avatar-placeholder">👩‍🏫</div>
+            <div class="status-indicator online"></div>
+          </div>
+          <div class="teacher-info">
+            <h3>Bu Sarah Wijaya</h3>
+            <p class="teacher-specialty">Spesialis: Konseling Remaja</p>
+            <p class="teacher-experience">5 tahun pengalaman</p>
+            <div class="teacher-rating">
+              <span>⭐⭐⭐⭐⭐</span>
+              <span>(4.9)</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-small">Pilih</button>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-avatar">
+            <div class="avatar-placeholder">👨‍🏫</div>
+            <div class="status-indicator busy"></div>
+          </div>
+          <div class="teacher-info">
+            <h3>Pak Ahmad Rizki</h3>
+            <p class="teacher-specialty">Spesialis: Masalah Akademik</p>
+            <p class="teacher-experience">8 tahun pengalaman</p>
+            <div class="teacher-rating">
+              <span>⭐⭐⭐⭐⭐</span>
+              <span>(4.8)</span>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-small">Sedang Sibuk</button>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-avatar">
+            <div class="avatar-placeholder">👩‍🏫</div>
+            <div class="status-indicator online"></div>
+          </div>
+          <div class="teacher-info">
+            <h3>Bu Indira Sari</h3>
+            <p class="teacher-specialty">Spesialis: Bullying & Trauma</p>
+            <p class="teacher-experience">6 tahun pengalaman</p>
+            <div class="teacher-rating">
+              <span>⭐⭐⭐⭐⭐</span>
+              <span>(4.9)</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-small">Pilih</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section class="schedule">
+    <div class="container">
+      <h2 class="section-title">Jadwal Tersedia</h2>
+      <div class="schedule-container">
+        <div class="schedule-header">
+          <button class="schedule-nav" id="prevDay">‹</button>
+          <h3 id="currentDate">Senin, 23 September 2024</h3>
+          <button class="schedule-nav" id="nextDay">›</button>
+        </div>
+        <div class="time-slots">
+          <div class="time-slot available" data-time="08:00">
+            <span class="time">08:00 - 09:00</span>
+            <span class="status">Tersedia</span>
+          </div>
+          <div class="time-slot booked" data-time="09:00">
+            <span class="time">09:00 - 10:00</span>
+            <span class="status">Terisi</span>
+          </div>
+          <div class="time-slot available" data-time="10:00">
+            <span class="time">10:00 - 11:00</span>
+            <span class="status">Tersedia</span>
+          </div>
+          <div class="time-slot available" data-time="13:00">
+            <span class="time">13:00 - 14:00</span>
+            <span class="status">Tersedia</span>
+          </div>
+          <div class="time-slot available" data-time="14:00">
+            <span class="time">14:00 - 15:00</span>
+            <span class="status">Tersedia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request Form -->
+  <section class="request-form">
+    <div class="container">
+      <div class="form-card">
+        <h2>Buat Permintaan Konsultasi</h2>
+        <form id="consultationForm">
+          <div class="form-group">
+            <label for="category">Kategori Masalah</label>
+            <select id="category" required>
+              <option value="">Pilih kategori...</option>
+              <option value="akademik">Masalah Akademik</option>
+              <option value="sosial">Masalah Sosial</option>
+              <option value="keluarga">Masalah Keluarga</option>
+              <option value="bullying">Bullying</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description">Deskripsi Masalah</label>
+            <textarea id="description" rows="4" placeholder="Ceritakan masalah kamu dengan detail..."
+              required></textarea>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="anonymous" checked>
+              <span class="checkmark"></span>
+              Kirim secara anonim
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="urgent">
+              <span class="checkmark"></span>
+              Ini adalah masalah urgent
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large">
+            Kirim Permintaan
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievement Section -->
+  <section class="achievements">
+    <div class="container">
+      <h2 class="section-title">Pencapaian Kamu</h2>
+      <div class="achievement-grid">
+        <div class="achievement-card earned">
+          <div class="achievement-icon">🎖️</div>
+          <h3>Berani Bicara</h3>
+          <p>Membuat laporan pertama</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🏆</div>
+          <h3>Konsisten</h3>
+          <p>5 sesi konsultasi</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">⭐</div>
+          <h3>Helpful</h3>
+          <p>Membantu teman</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-text">SpeakUp.id</span>
+          </div>
+          <p class="footer-description">
+            Platform konsultasi digital untuk siswa Indonesia
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SpeakUp.id. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
